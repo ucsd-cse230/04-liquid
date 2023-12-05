@@ -1,0 +1,8 @@
+# Rename this file to hie.yaml to open this project in HIE and use Stack as build system
+
+cradle:
+  stack:
+    - path: "./src"
+      component: "cse230-liquid:lib"
+    - path: "./test"
+      component: "cse230-liquid:test"

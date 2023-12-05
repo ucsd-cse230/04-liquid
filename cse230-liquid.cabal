@@ -1,0 +1,50 @@
+cabal-version: 1.12
+
+name:           cse230-liquid
+version:        0.1.0.0
+description:    Programming assignment using LiquidHaskell
+homepage:
+bug-reports:
+author:         Ranjit Jhala
+maintainer:     jhala@cs.ucsd.edu
+copyright:      2023 Ranjit Jhala
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      CSE230.BSTSort
+  hs-source-dirs:
+      src
+  build-depends:
+      liquid-prelude,
+      liquidhaskell
+  if impl(ghc >= 9.2)
+    build-depends:
+      base,
+      containers
+  else
+    build-depends:
+      liquid-base,
+      liquid-containers
+  default-language: Haskell2010
+  ghc-options: -fplugin=LiquidHaskell
+
+test-suite test
+  default-language: Haskell98
+  type:             exitcode-stdio-1.0
+  hs-source-dirs:   test
+  Default-Extensions: OverloadedStrings
+  main-is:          Test.hs
+  build-depends:    base,
+                    containers,
+                    mtl,
+                    filepath,
+                    QuickCheck,
+                    tasty,
+                    tasty-hunit,
+                    tasty-quickcheck,
+                    process,
+                    cse230-liquid
+  other-modules:    Common
