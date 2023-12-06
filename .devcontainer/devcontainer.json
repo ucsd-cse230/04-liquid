@@ -1,14 +1,14 @@
 {
   "name": "Haskell (Community)",
   // uncomment to download container image from Docker Hub
-  "image": "ghcr.io/ranjitjhala/cse130-devcontainer:latest",
+  "image": "ghcr.io/ucsd-cse130-mhb/cse130-devcontainer:latest",
 
   // uncomment to build container locally
   // "build": {
   //   // "dockerfile": "Dockerfile",
   //   "args": {
   //     // Update 'GHC_VERSION' to pick a GHC version: recommended, latest, 9.2, 9.0, 8.10, 8.8, 8.6
-  //     "GHC_VERSION": "9.2.7"
+  //     "GHC_VERSION": "9.4.8"
   //   }
   // },
   // Configure tool-specific properties.
