@@ -1,6 +1,8 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Eta reduce" #-}
 {-# HLINT ignore "Use foldr" #-}
+{-@ LIQUID "--compile-spec" @-}
+
 module CSE230.BSTSort where
 
 import qualified Data.Set as S

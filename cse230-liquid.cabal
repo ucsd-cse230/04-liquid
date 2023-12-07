@@ -15,10 +15,12 @@ build-type:     Simple
 library
   exposed-modules:
       CSE230.BSTSort
+      CSE230.Pointers
   hs-source-dirs:
       src
   build-depends:
       liquid-prelude,
+      bytestring,
       liquidhaskell
   if impl(ghc >= 9.2)
     build-depends:
