@@ -73,7 +73,8 @@ okBST = Node 4
 -------------------------------------------------------------------------------
 -- | Converting BST to Ordered Lists
 -------------------------------------------------------------------------------
--- HINT: write the correct refinement type for `toList`
+-- HINT: implement the code and write the correct refinement type for `toList`
+-- you may need a helper method to suitably `splice` sub-lists together...
 toList :: BST a -> OList a
 toList Leaf         = ONil
 toList (Node v l r) = error "TODO"
@@ -81,7 +82,8 @@ toList (Node v l r) = error "TODO"
 -------------------------------------------------------------------------------
 -- | Converting lists to BST
 -------------------------------------------------------------------------------
--- HINT: write the correct refinement type for `fromList`
+-- HINT: implement the code and write the correct refinement type for `fromList`;
+-- you may need a helper `insert` function...
 fromList :: (Ord a) => [a] -> BST a
 fromList []     = Leaf
 fromList (x:xs) = error "TODO"
