@@ -17,6 +17,8 @@ Simply by doing
 $ stack build --fast
 ```
 
+The first time, it will take a **long time** to install LiquidHaskell (the refinement type checker).
+
 You _should_ get a bunch of LH errors in VSCODE itself, but if its being flaky,
 then open up a terminal and just type
 
