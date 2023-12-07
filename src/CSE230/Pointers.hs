@@ -67,7 +67,7 @@ data ByteString = BS {
 -- | Problem 1 : Fix the type of `create` so `bsTaco` typechecks
 ----------------------------------------------------------------------------------
 
-{-@ create :: n:Nat -> (Ptr Word8 -> IO ()) -> ByteString @-}     -- TODO: elide type
+{-@ create :: n:Nat -> (Ptr Word8 -> IO ()) -> ByteString @-}
 create :: Int -> (Ptr Word8 -> IO ()) -> ByteString
 create n fill = unsafePerformIO $ do
   fp <- mallocForeignPtrBytes n
@@ -92,7 +92,7 @@ pack str = create n $ \p -> packLoop p xs
     n    = length str
     xs   = map c2w str
 
-{-@ packLoop :: p:Ptr Word8 -> [Word8] -> IO () @-}    -- TODO: elide type
+{-@ packLoop :: p:Ptr Word8 -> [Word8] -> IO () @-}
 packLoop :: Ptr Word8 -> [Word8] -> IO ()
 packLoop p (x:xs) = poke p x >> packLoop (plusPtr p 1) xs
 packLoop _ []     = return ()

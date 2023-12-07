@@ -14,7 +14,28 @@ that
 Simply by doing
 
 ```bash
-$ stack build
+$ stack build --fast
+```
+
+You _should_ get a bunch of LH errors in VSCODE itself, but if its being flaky,
+then open up a terminal and just type
+
+```bash
+$ stack build --fast --file-watch
+```
+
+and it will automatically recompile at each save, and show you errors in the terminal.
+
+Your job is to get all the code to compile AND then ultimately get
+
+```bash
+$ stack test --fast
+```
+
+to produce the following output:
+
+```bash
+OVERALL SCORE = 45 / 45
 ```
 
 (or it should be running automatically on save in VSCode, modulo some bugs and glitches...)
